@@ -30,7 +30,8 @@ public class WordCounterActivity extends AppCompatActivity {
     }
 
     public void onCountButtonClicked(View view) {
-        String string = "" + WordCounter.wordCount(getWordsToCountText());
+        WordCounter wordCounter = new WordCounter(getWordsToCountText());
+        String string = wordCounter.getStringWordsByCount();
         setCountView(string);
     }
 }
